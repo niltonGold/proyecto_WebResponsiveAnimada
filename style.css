@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}    
+
+/* Breackpoints */
+    /* Mobile */
+    @media ( min-width : 0px ) { /* Pantalla modo movil de 0px a 480px */
+        body{
+            background-color: aqua;
+        }
+
+    }
+
+    /* Tablet */
+    @media ( min-width : 480px ) { /* Pantalla modo movil de 480px a 1024px */
+        body{
+            background-color: antiquewhite;
+        }
+    }
+    
+    /* Desktop */
+    @media ( min-width : 1024px ) { /* Pantalla modo movil de 1024px a 1440px */
+        body{
+            background-color: rgb(199, 73, 117);
+        }
+    }
+
+    /* Desktop-XL */
+    @media ( min-width : 1440px ) { /* Pantalla modo movil de 1440px hasta el infinito */
+        body{
+            background-color: rgb(36, 170, 24);
+        }
+    }    
+
+
+
+body{
+   
+}
+
+    header{
+        background-color: bisque;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+        .header__image-htmlcss{
+            width: 7rem;
+        }
+
+
+        .header_nav_container{
+            display: flex;
+        }
+            .header__nav-containerLink{
+                width: 7rem;
+            }
+
+
+        .header__iconos-container{
+            display: flex;
+        }
+            .header__icono-imagen{
+                width: 2rem;
+            }
+            
+    
+    main{
+
+    }
+
+    footer{
+
+    }
