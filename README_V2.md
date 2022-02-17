@@ -1,3 +1,3 @@
 # proyecto_WebResponsiveAnimada
 
-version 1
+version 2
