@@ -185,9 +185,9 @@ body{
 
     /* Pantalla modo Tablet de 1024x al infinito */
     @media ( min-width : 481px ) and ( max-width: 1024px ) {
-        .body{
+        /* .body{
             background-color: rgb(0, 72, 255);
-        }
+        } */
 
         .header__image-htmlcss{
             display: none;
@@ -241,12 +241,181 @@ body{
 
 
 .main{
-
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2em;  
 }    
 
+/*  Seccion del Video */
+    .banner{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+    }
+            .banner__video-container{
+                width: 100%;
+            }
+
+                .banner__video{
+                    width: 100%;
+                    display: block;
+                }
+
+            .banner__background-opacity {
+                background-color: black;
+                width: 100%;
+                opacity: 0.45;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 1rem;
+            }
+
+            .banner__text{
+                color: #ffffff;
+                position: absolute;
+                top: 0;
+                text-align: center;
+                width: 80%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 1em;
+            }
+
+
+/* Seccion del location of world */
+
+.location-of-world__title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.location-of-world__cards-container{
+    /* width: 100%;
+    margin: 50% auto; */
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 1rem; */
+}
+
+    .location-of-world__card{
+        margin: 0.5rem;
+
+
+        /* Efecto al girar el card */
+        -webkit-perspective: 800;
+        perspective: 800;
+        
+
+    }
+
+    .location-of-world__card:hover .location-of-world__card-front-begin{
+        transform: rotateY(180deg); 
+    }
+
+
+        .location-of-world__card-front-begin{
+            width: 300px;
+            height: 150px;
+            background-color: black;
+            position: relative;/* para que se posiones el texto de la parte de delante y detras */
+
+
+            /* Hara que al girar la parte de atras quede atras y la de adelante delante */
+            transform-style: preserve-3d;
+
+            /* Esto hara que la targeta gire como si fuera de verdad */
+            transition: .7s ease;
+            border-radius: 5%;
+            border: 2px;
+        }
+
+        .location-of-world__card-front, .location-of-world__card-begin{
+            width: 100%;
+            height: 100%;
+            position: absolute;/* para que se posiones el texto de la parte de delante y detras */
+            top: 0;
+            left: 0;
+            -webkit-backface-visibility: hidden; 
+            /* Esto se hace para que si la parte de atras a girado, no se muestre esa parte que ha girado */
+            /* Para rotar y que no se muestre la parte trasera y delantera */
+            backface-visibility: hidden;
+            
+        
+            
+        }
+
+        .mountain{
+            width: 100%;
+            background-image: url(images/Mountain.jpg);
+            background-size: cover;
+            border-radius: 5%;
+            border: 2px;
+        }
+
+        .lake{
+            width: 100%;
+            background-image: url(images/Lake.jpg);
+            background-size: cover;
+            border-radius: 5%;
+            border: 2px;
+        }
+
+        .ocean{
+            width: 100%;
+            background-image: url(images/Ocean.jpg);
+            background-size: cover;
+            border-radius: 5%;
+            border: 2px;
+        }
+
+            .location-of-world__texto-Front{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                padding-top: 2rem;
+                font-size:xx-large;
+            }
+                
 
 
 
+        .location-of-world__card-begin{
+            /* Para poder rotar la card */
+            transform: rotateY(180deg);
+
+            /* Centrar texto de la parte de atras del card */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            flex-direction:column;
+            gap: 1rem;
+        }
+                .location-of-world__begin-title-text{
+                    font-size: large;
+                }
+
+                .location-of-world__begin-paragraph-text{
+                    font-size: small;
+                }
+
+/* Seccion plans */
 
 
 
