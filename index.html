@@ -13,22 +13,26 @@
 
         <!-- El menu de 3 rayas, una imagen de htmlcss y la x solo se veran en la version Mobile y Tablet -->
         <img src="./images/html5css3.svg" class="header__image-htmlcss-MobileAndTablet" ></img>
-
-        <input type="checkbox" id="checkbox__hamburguesa" class="header__hamburguesa-checkbox"/>
+        
+        
+         <input type="checkbox" id="checkbox__hamburguesa" class="header__hamburguesa-checkbox"/>
             <label for="checkbox__hamburguesa" class="header__menu-hamburguesa-icono-3rayas"> ☰ </label>
             <label for="checkbox__hamburguesa" class="header__menu-hamburguesa-icono-x"> X </label>
-   
-
+                
+            
        
-
         <!-- Logo HTML y CSS -->
-        <img src="./images/html5css3.svg" class="header__image-htmlcss" ></img>
+            
+            <img src="./images/html5css3.svg" class="header__image-htmlcss" ></img>
+            
+            
+
 
         <!-- Links de navegacion -->
         <nav class="header_nav_container">
-            <div class="header__nav-containerLink"> <a class="header__nav-links">HOME</a> </div>
-            <div class="header__nav-containerLink"> <a class="header__nav-links">BOARD</a> </div>
-            <div class="header__nav-containerLink"> <a class="header__nav-links">CONTACTO</a> </div>
+            <div class="header__nav-containerLink"> <a href="./index.html" class="header__nav-links">HOME</a> </div>
+            <div class="header__nav-containerLink"> <a href="./pages/chessBoard/chessBoard.html" class="header__nav-links">BOARD</a> </div>
+            <div class="header__nav-containerLink"> <a href="./pages/form/form.html" class="header__nav-links">CONTACTO</a> </div>
         </nav>
 
         <!-- Iconos de Redes Sociales -->
@@ -46,6 +50,10 @@
 
 
     <main class="main">
+
+
+        <!-- Banner -->
+
         <div class="banner">
             <div class=" banner__video-container">   
                 <video autoplay muted="muted" loop type="video/mp4" class="banner__video" src="./videos/pexels-kelly-lacy.mp4"></video>
@@ -58,6 +66,10 @@
             </div>
                  
         </div>
+
+
+
+        <!-- Lugares del mundo -->
 
         <div class="location-of-world">
             <h2 class="location-of-world__title">
@@ -122,7 +134,111 @@
             </div>
         </div>
 
+
+
+        <!-- Plans -->
+
         <div class="plans">
+
+            <div class="plans__title">
+                <h3 class="plans__title-h3"> Find a plan that's right for you </h3>
+                <p class="plans__title-subtitle"> Every plan comes with a 30-day free trial </p>
+            </div>
+
+
+            <div class="plans__card-container">
+                    <!-- *********************************************************************** -->
+                    
+                        <div class="plans__card">
+
+                            <div class="plans__card-h4-dollar-price-month">
+                                <h4 class="plans__card-h4" > Bronze Packege </h4>
+
+                                <div class="plans__card-price">
+                                    <span class="plans__card-dollar-span"> $ </span>
+                                    <span class="plans__card-price-span"> 10 </span>
+                                    <span class="plans__card-month-span"> MONTH </span>
+                                </div>
+                            </div>
+
+                            <ul class="plans__card-characteristic">
+                                <li class="plans__card-characteristic--item">Unlimited Listing</li>
+                                <li class="plans__card-characteristic--item">Edit your listing</li>
+                                <li class="plans__card-characteristic--item">Approve reviews</li>
+                            </ul>
+
+                            <div class="plans__card-button-container">    
+                                <button class="plans__card-button">
+                                    Get Startert Now
+                                </button>
+                            </div>
+
+                        </div>
+
+                    <!-- *********************************************************************** -->
+                    
+                        <div class="plans__card sticker-container">
+
+                            <div class="plans__card-h4-dollar-price-month">
+                                <h4 class="plans__card-h4" > Gold Packege </h4>
+
+                                <div class="plans__card-price">
+                                    <span class="plans__card-dollar-span"> $ </span>
+                                    <span class="plans__card-price-span"> 19 </span>
+                                    <span class="plans__card-month-span"> MONTH </span>
+                                </div>
+                            </div>
+
+                            <ul class="plans__card-characteristic">
+                                <li class="plans__card-characteristic--item">Unlimited Listing</li>
+                                <li class="plans__card-characteristic--item">Edit your listing</li>
+                                <li class="plans__card-characteristic--item">Approve reviews</li>
+                                <li class="plans__card-characteristic--item">Take booking online</li>
+                                <li class="plans__card-characteristic--item">24/7 support service</li>
+                            </ul>
+
+                            <div class="plans__card-button-container"> 
+                                <button class="plans__card-button">
+                                    Get Startert Now
+                                </button>
+                            </div>
+
+                            <div class="plans__card-sticker">
+                                <p>MOST POPULAR</p>
+                            </div>
+    
+                        </div>
+
+
+                    <!-- *********************************************************************** -->
+                    
+                        <div class="plans__card">
+                            <div class="plans__card-h4-dollar-price-month">
+                                <h4 class="plans__card-h4" > Platinum Packege </h4>
+
+                                <div class="plans__card-price">
+                                    <span class="plans__card-dollar-span"> $ </span>
+                                    <span class="plans__card-price-span"> 49 </span>
+                                    <span class="plans__card-month-span"> MONTH </span>
+                                </div>
+                            </div>    
+
+                            <ul class="plans__card-characteristic">
+                                <li class="plans__card-characteristic--item">Unlimited Listing</li>
+                                <li class="plans__card-characteristic--item">Edit your listing</li>
+                                <li class="plans__card-characteristic--item">Approve reviews</li>
+                            </ul>
+
+                            <div class="plans__card-button-container">
+                                <button class="plans__card-button">
+                                    Get Startert Now
+                                </button>
+                            </div>
+                        </div>
+
+                    <!-- *********************************************************************** --> 
+
+            </div> 
 
         </div>
         
@@ -132,8 +248,8 @@
 <!-- ************************************************************************************************************************************ -->
 
 
-    <footer>
-
+    <footer class="footer">
+        <p>Copyright @ Equipo3 2021</p>
     </footer>
 </body>
 

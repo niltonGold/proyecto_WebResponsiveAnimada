@@ -25,8 +25,18 @@ body{
         border-color: orange;
         
         width: 100%;
-        padding: 1rem;
+        padding: 1rem 1rem 0rem 1.5rem;
     }
+
+
+
+
+
+
+
+
+
+
 
             /* El checkbox, el menu de 3 rayas y la x solo se veran en la version Mobile y Tablet */
             .header__image-htmlcss-MobileAndTablet{
@@ -36,18 +46,27 @@ body{
 
             .header__hamburguesa-checkbox{
                 display: none;    
+
             }
 
-            .header__menu-hamburguesa-icono-3rayas{
-                display: none;
-                position: relative;
-                font-size: 2rem; 
-                padding-top: 2.5rem;
-                
-                left: 60%;
-                /* background-color: bisque; */
+            .header__container-checkbox-3rayas-x{
+                /* background-color: #1b1c20; */
+                display: flex;
                 align-items: center;
             }
+
+                .header__menu-hamburguesa-icono-3rayas{
+                    display: none;
+                    position: relative;
+                    font-size: 2rem; 
+                    padding-top: 2.5rem;
+                    
+                    /* background-color: #4aca46; */
+                    left: 60%;
+                    /* vertical-align:top */
+                    
+                    
+                }
 
             .header__menu-hamburguesa-icono-x{
                 display: none; 
@@ -76,6 +95,11 @@ body{
                             width: 7rem;
                             height: 5rem; 
                         }
+
+                            .header__nav-links{
+                                text-decoration: none;
+                                color: black;
+                            }
 
 
             /* Iconos de Redes Sociales */            
@@ -128,10 +152,6 @@ body{
 /* Breackpoints */
     /* Pantalla modo movil de 0px a 480px */
     @media ( min-width : 0px ) and ( max-width: 480px ) { 
-        .body{
-            background-color: aqua;
-        }
-
         .header__image-htmlcss{
             display: none;
         }
@@ -161,10 +181,20 @@ body{
             display: inline; 
         }
 
+
+
+        .header__hamburguesa-checkbox:checked~.b{
+            background-color: #717787;
+        }
+
+
+
+
+
         .header__hamburguesa-checkbox:checked~.header_nav_container{
             display: block;
                    
-        }
+        } */
 
         .header__hamburguesa-checkbox:checked~.header__iconos-container{
             display: inline-flex;
@@ -298,6 +328,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    color: #717787;
 }
 
 .location-of-world__cards-container{
@@ -338,7 +369,7 @@ body{
 
             /* Esto hara que la targeta gire como si fuera de verdad */
             transition: .7s ease;
-            border-radius: 5%;
+            border-radius: 15px;
             border: 2px;
         }
 
@@ -417,8 +448,252 @@ body{
 
 /* Seccion plans */
 
+    /* Titulos de la Seccion Plans */
+    .plans{
+        background-color: #d5d9dc;
+        color: #555a6a;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        padding: 3rem;
+        margin: 2rem 0rem 2rem 0rem; /* arriba, derecha, abajo, izquierda */
+    }
+        .plans__title {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            row-gap: 1rem;
+        }
 
+        .plans__title-h3{
+            font-size: 2rem;
+        }
 
+        .plans__title-subtitle{
+            color: #999ba3;
+        }
 
-
+        
     
+
+    /* Plans cards */
+    .sticker-container{
+        position: relative;
+    }
+
+    .plans__card-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        row-gap: 2rem;
+        padding: 2rem;
+
+    }
+            .plans__card{
+                background-color: #ffffff;
+                width: 90%;
+                border-radius: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 1rem;
+                padding: 1rem;
+
+            }
+
+            
+                
+            
+                    .plans__card-h4{
+                        font-size: 1.1rem;
+                    }
+
+                    .plans__card-price{
+                        /* background-color: #3bbdee; */
+                        text-align: center;
+                    }
+
+                    .plans__card-dollar-span{
+                        font-size: 0.7rem;
+                        vertical-align: top;
+                    }
+                    .plans__card-price-span{
+                        font-size: 1.5rem;
+                    }
+                    .plans__card-month-span{
+                        font-size: 0.7rem;
+                    }
+
+
+
+                    .plans__card-characteristic{
+                        list-style: none;
+                        text-align: center;
+                        font-size: 0.8rem;
+                    }
+                            .plans__card-characteristic--item{
+                                margin: 0.7rem;
+                            }
+
+                            /* para poder colocar el circulo redondo con el check se usa ::before */
+                            /* para darle estilo a cosas como listas */
+                            .plans__card-characteristic--item::before{
+                                content: '✓';
+                                color:#ffffff;
+                                background-color:#74ce6a;
+                                padding: 0.4rem;/* Padding es el espacio dentro de la caja*/  
+                                margin-right: 1rem; /* Margin es el espacio fuera de la caja */ 
+                                border-radius: 50px; 
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 15px;
+                                height: 15px;
+                            }
+
+                    .plans__card-button{
+                        background-color:#74ce6a;
+                        color: #ffffff;
+                        cursor: pointer;
+                        padding: 1rem 2rem 1rem 2rem;
+                        border: 0;
+                        border-radius: 8px;
+                        border-bottom: 3px solid #66ac64;
+                    }        
+                    
+                    .plans__card-button:hover{
+                        border:4px solid #124911;
+                    }
+
+                    .plans__card-button:active { /* cuando le de click al boton */
+                        background-color: rgb(21, 87, 5);
+                    }
+
+                    .plans__card-sticker{
+                        height: 55px;
+                        width: 55px;
+
+                        color:#ffffff;
+                        background-color: #3bbdee;
+
+                        font-size: 0.5rem;
+                        border-radius: 50px;
+
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        align-items: center;
+                        padding: 1.7rem;
+                        left: 0.5rem;
+                        top: -1rem;
+
+                        position: absolute;
+                        
+                    }
+
+                        .plans__card-sticker:hover {
+                            transition: 0.5s ease;
+                            transform: rotate(360deg);
+                        }
+
+
+
+        /* Como se veran las plans en version MOBILE */                    
+        @media ( min-width : 0px ) and ( max-width: 480px ) {
+            .plans{
+                width: 95%;
+                padding-left: 0.5rem;
+            }
+            .plans__card{
+                width: 120%;
+            }
+            .plans__card-button {
+                padding: 1rem 2rem 1rem 2rem;
+            }
+
+        
+        }
+
+
+        
+        /* Como se veran las plans en version TABLET */
+        @media ( min-width : 481px ) and ( max-width: 1024px ) {
+            
+            .plans__card{
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                margin:0;                
+            }
+
+            .plans__card-characteristic{
+                text-align: left;
+                /* background-color: #3bbdee; */
+            }
+
+         
+
+
+
+
+            .plans__card-h4-dollar-price-month{
+                width: 35%;
+                /* background-color: #3bbdee; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                /* background-color: #999ba3; */
+            }
+            .plans__card-characteristic{
+                width: 30%;
+            }
+            .plans__card-button-container{
+                width: 35%;
+                /* background-color: #2848c7; */
+                text-align: center;
+
+            }
+
+
+        }
+
+
+
+        /* Como se veran las plans en version DESKTOP para adelante */
+        @media ( min-width : 1025px ) {
+            .plans__card-container{
+                flex-direction: row;
+                flex-wrap: nowrap;
+                column-gap: 2em;
+            }
+
+            .plans__card:hover{
+                transform: scale(1.08);
+                animation-duration: 0.25s;
+                animation-timing-function: ease-in;
+                cursor: pointer;
+            }  
+
+        }
+
+ 
+.footer{
+    width: 100%;
+    background-color: #1b1c20;
+    color: #ffffff;
+    padding: 1.5em;
+    text-align: center;
+}        
+    
+
+
+
+
+
+
