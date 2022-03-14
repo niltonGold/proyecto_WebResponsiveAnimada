@@ -62,7 +62,7 @@ body{
                     padding-top: 2.5rem;
                     
                     /* background-color: #4aca46; */
-                    left: 60%;
+                    left: 40vw;
                     /* vertical-align:top */
                     
                     
@@ -73,7 +73,7 @@ body{
                 position: relative;
                 font-size: 2rem;
                 padding-top: 2.5rem;
-                left: 60%;
+                left: 40vw;
                 /* background-color: rgb(135, 83, 20); */
             }
 
@@ -182,13 +182,9 @@ body{
         }
 
 
-
         .header__hamburguesa-checkbox:checked~.b{
             background-color: #717787;
         }
-
-
-
 
 
         .header__hamburguesa-checkbox:checked~.header_nav_container{
@@ -246,7 +242,7 @@ body{
 
         .header__menu-hamburguesa-icono-3rayas{
             display: inline; 
-            left: 70%;
+            left: 60vW;
         }
 
         .header__hamburguesa-checkbox:checked~.header_nav_container{
@@ -264,6 +260,7 @@ body{
 
         .header__hamburguesa-checkbox:checked~.header__menu-hamburguesa-icono-x{
             display: inline;
+            left: 60vW;
         }
         
     }
@@ -354,10 +351,17 @@ body{
 
     .location-of-world__card:hover .location-of-world__card-front-begin{
         transform: rotateY(180deg); 
+        /* transform: rotateX(180deg);  */
     }
 
+    .location-of-world__card_X:hover .location-of-world__card-front-begin_X{
+        transform: rotateX(180deg); 
+    }
 
-        .location-of-world__card-front-begin{
+    
+
+
+        .location-of-world__card-front-begin, .location-of-world__card-front-begin_X{
             width: 300px;
             height: 150px;
             background-color: black;
@@ -373,7 +377,7 @@ body{
             border: 2px;
         }
 
-        .location-of-world__card-front, .location-of-world__card-begin{
+        .location-of-world__card-front, .location-of-world__card-begin, .location-of-world__card-front_X, .location-of-world__card-begin_X{
             width: 100%;
             height: 100%;
             position: absolute;/* para que se posiones el texto de la parte de delante y detras */
@@ -428,6 +432,7 @@ body{
         .location-of-world__card-begin{
             /* Para poder rotar la card */
             transform: rotateY(180deg);
+            /* transform: rotateX(180deg); */
 
             /* Centrar texto de la parte de atras del card */
             display: flex;
@@ -438,6 +443,23 @@ body{
             flex-direction:column;
             gap: 1rem;
         }
+
+        .location-of-world__card-begin_X{
+            /* Para poder rotar la card */
+            transform: rotateX(180deg);
+
+            /* Centrar texto de la parte de atras del card */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            flex-direction:column;
+            gap: 1rem;
+        }
+
+
+
                 .location-of-world__begin-title-text{
                     font-size: large;
                 }
@@ -445,6 +467,8 @@ body{
                 .location-of-world__begin-paragraph-text{
                     font-size: small;
                 }
+
+                
 
 /* Seccion plans */
 
