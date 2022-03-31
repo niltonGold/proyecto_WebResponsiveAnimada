@@ -1,3 +1,3 @@
 # proyecto_WebResponsiveAnimada
 
-version 6
+version 8
